@@ -66,7 +66,6 @@
 			children = (
 				ADB196202146629E00C5317F /* AppDelegate.swift */,
 				ADB19627214662A000C5317F /* Assets.xcassets */,
-				ADB1962C214662A000C5317F /* Info.plist */,
 			);
 			path = supportingFiles;
 			sourceTree = "<group>";
@@ -95,6 +94,7 @@
 				43CBE58D2993E85A00BDFA96 /* View */,
 				43CBE58E2993E85F00BDFA96 /* supportingFiles */,
 				ADB19629214662A000C5317F /* LaunchScreen.storyboard */,
+				ADB1962C214662A000C5317F /* Info.plist */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";

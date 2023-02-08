@@ -5,7 +5,7 @@ class ViewController: UIViewController {
     //MARK: - Constants
     
     private var isFinishingTipingNumber: Bool = true
-    private var model = Model()
+   
     
      var displayValue : Double {
         get {
@@ -16,36 +16,26 @@ class ViewController: UIViewController {
             displayLabel.text = String(newValue)
         }
     }
+
     //MARK: - IBOutlet
     
     @IBOutlet weak var displayLabel: UILabel!
     
     //MARK: - IBAction Methods
     
-    @IBAction func calcButtonPressed(_ sender: UIButton) {
+    @IBAction func calcButtonPressed(_ sender: UIButton)  {
         isFinishingTipingNumber = true
-
-        model.calcNumbers(sender)
+        
+        if let calcMethod = sender.currentTitle {
+            let calculator = calculatorLogic(number: displayValue)
+            guard let result = calculator.calcNumbers(symbol: calcMethod) else { return }
+            displayValue = result
+        }
     }
     
     @IBAction func numButtonPressed(_ sender: UIButton) {
         if let numValue = sender.currentTitle {
-            if displayLabel.text?.count != 0 {
-                if isFinishingTipingNumber {
-                    displayLabel.text = numValue
-                    isFinishingTipingNumber = false
-                } else {
-                    
-                    if numValue == "." {
-                        let isInt = floor(displayValue) == displayValue
-                        if !isInt {
-                            return
-                        }
-                        
-                        displayLabel.text = displayLabel.text! + numValue
-                    }
-                }
-            }
+          
         }
     }
 }
