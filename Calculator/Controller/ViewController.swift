@@ -35,7 +35,22 @@ class ViewController: UIViewController {
     
     @IBAction func numButtonPressed(_ sender: UIButton) {
         if let numValue = sender.currentTitle {
-          
+            if displayLabel.text?.count != 0 {
+                if isFinishingTipingNumber {
+                    displayLabel.text = numValue
+                    isFinishingTipingNumber = false
+                } else {
+                    
+                    if numValue == "." {
+                        let isInt = floor(displayValue) == displayValue
+                        if !isInt {
+                            return
+                        }
+                        
+                        displayLabel.text = displayLabel.text! + numValue
+                    }
+                }
+            }
         }
     }
 }
