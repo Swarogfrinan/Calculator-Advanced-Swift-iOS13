@@ -45,8 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				43CBE5892993E30400BDFA96 /* calculatorLogic.swift */,
-				43CBE5902993FBC300BDFA96 /* classExample.swift */,
-				43CBE5922993FBCD00BDFA96 /* structureExample.swift */,
+				43D6873029967A080040CA9D /* Examples */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -74,6 +73,15 @@
 				ADB19627214662A000C5317F /* Assets.xcassets */,
 			);
 			path = supportingFiles;
+			sourceTree = "<group>";
+		};
+		43D6873029967A080040CA9D /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				43CBE5902993FBC300BDFA96 /* classExample.swift */,
+				43CBE5922993FBCD00BDFA96 /* structureExample.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		ADB196142146629E00C5317F = {

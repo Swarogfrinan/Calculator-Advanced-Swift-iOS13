@@ -48,8 +48,9 @@ class ViewController: UIViewController {
                         if !isInt {
                             return
                         }
-                        
-                        displayLabel.text = displayLabel.text! + numValue
+                        UIView.animate(withDuration: 0.3) { [self] in
+                            displayLabel.text = displayLabel.text! + numValue
+                        }
                     }
                 }
             }
