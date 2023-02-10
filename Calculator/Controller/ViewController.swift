@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     //MARK: - IBOutlet
     
     @IBOutlet weak var displayLabel: UILabel!
+    private var calculator = calculatorLogic()
     
     //MARK: - IBAction Methods
     
@@ -27,9 +28,10 @@ class ViewController: UIViewController {
         isFinishingTipingNumber = true
         
         if let calcMethod = sender.currentTitle {
-            let calculator = calculatorLogic(number: displayValue)
-            guard let result = calculator.calcNumbers(symbol: calcMethod) else { return }
-            displayValue = result
+            calculator.setNumber(displayValue)
+            if let result = calculator.calcNumbers(symbol: calcMethod) {
+                displayValue = result
+            }
         }
     }
     
